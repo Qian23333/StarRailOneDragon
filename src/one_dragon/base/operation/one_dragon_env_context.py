@@ -22,7 +22,7 @@ class OneDragonEnvContext:
         self.project_config: ProjectConfig = ProjectConfig()
         self.env_config: EnvConfig = EnvConfig()
         self.download_service: DownloadService = DownloadService(self.project_config, self.env_config)
-        self.git_service: GitService = GitService(self.project_config, self.env_config, self.download_service)
+        self.git_service: GitService = GitService(self.project_config, self.env_config)
         self.python_service: PythonService = PythonService(self.project_config, self.env_config, self.download_service)
         self.gh_proxy_service: GhProxyService = GhProxyService(self.env_config)
         self.installer_dir: Optional[str] = None
